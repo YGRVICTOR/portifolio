@@ -1,7 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body{
-    background-color: #d1d1d1;
-    color: rgb(0, 0, 0);
+    background-color: #000000;
+    color: rgb(248, 248, 248);
+    padding-top: 100px;
+    
 }   
+
+.logoimg{
+    margin: 0 auto;
+
+}
+
+#eulogo {
+    height: 100px;
+}
 
 .imgnav {
 
@@ -10,26 +28,186 @@ height: 30px;
 }
 
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    max-height: 80px;
-    z-index: 1000;
-    display: flex
-;
+    height: 80px; /* Certifique-se de que tem uma altura fixa */
+    z-index: 100;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 18px;
-    background: linear-gradient(to right, #333, #333 60%, #eee 50%, #333 25%);
+    padding: 0 20px;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(4,241,28,1) 44%, rgba(39,180,10,0.9808298319327731) 61%, rgba(13,13,13,1) 100%);
     box-sizing: border-box;
 }
 
+    
+
 #ulnav{
     list-style: none;
-    margin-right: 120px;
+    margin-right: 250px;
     padding: 0;
     display: flex;
-    gap: 50px;
+    gap: 60px;
+    align-items: center;
+}
+
+
+
+#ulnav a{ 
+    color: rgb(66, 66, 66);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     text-decoration: none;
+    display: inline-block;
+
+}
+
+#ulnav a:hover{
+    color: white;
+    transform: scale(1.4);
+    transition: 1s;
+}
+/*começo sobremim*/
+#sobremimh2 {
+
+    text-align: center;
+}
+
+.sobremim-content{ 
+    margin: 10px;
+    font-size: 16px;
+}
+
+#h1VIC {
+    margin: 10px;
     
+}
+
+/*começo projeto*/
+
+.PROJETOSGERAL h1 {
+    text-align: center;
+}
+
+.projetos-content {
+    margin: 10px;
+        font-size: 16px;
+}
+
+.containergrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+.containergrid video {
+    width: 100%;
+    max-width: 280px;
+    height: 160px;
+    border-radius: 8px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.containergrid video:hover {
+    transform: scale(2.4); 
+    cursor: pointer;
+}
+
+.contatos-ini h2 {
+    text-align: center;
+}
+
+.footer {
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(4,241,28,1) 44%, rgba(39,180,10,0.9808298319327731) 61%, rgba(13,13,13,1) 100%);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 0px 20px;
+    font-size: 1rem;
+    
+   
+}
+
+
+.footer a {
+    color: #ffd7e3; 
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500; 
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #0d37f1; 
+    transform: scale(1.1); 
+}
+
+
+/*inicio media quary*/
+@media (max-width: 1024px) {
+    #ulnav {
+        gap: 30px; 
+        margin-right: 50px;
+    }
+
+    .containergrid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #ulnav {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .containergrid {
+        grid-template-columns: 1fr; 
+    }
+
+    .footer {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px;
+    }
+
+    #h1VIC {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .sobremim-content,
+    .projetos-content {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .containergrid video {
+        height: 120px; 
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
 }
